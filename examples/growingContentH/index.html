@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="app.css">
+
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myCtrl" ng-switch="select">
+		<p>Hello World</p>
+		<p>How are you</p>
+		<button ng-click="incrToggle()">Toggle</button>
+		<div style="position: relative">
+			<div>Cover me up!!</div>
+			<p>And me!!!</p>
+			<p>And me!!!</p>
+			<p>And me!!!</p>
+			<p>And me!!!</p>
+			<p>And me!!!</p>
+			<p>And me!!!</p>
+			<p>And me!!!</p>
+			<p>And me!!!</p>
+			<p>And me!!!</p>
+
+			<mng-coverup ng-if="select===1"> <img
+				src="spinner.gif" />Centered
+			<p ng-repeat="line in lines">{{ line }}</p>
+			</mng-coverup>
+		</div>
+	</div>
+	<script src="../../../bower_components/angular/angular.js"></script>
+	<script
+		src="../../../bower_components/angular-mocks/angular-mocks.test.js"></script>
+	<script src="../../../angular-coverup.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>

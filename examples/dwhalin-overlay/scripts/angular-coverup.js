@@ -1,7 +1,6 @@
 /**
  * 
  */
-
 (function () {
 	// Need to create some default styles, want them in a style sheet so that they can be
 	// over written in the apps css file.
@@ -12,32 +11,7 @@
 	// FIXME: look at all siblings and set the zindex accordingly???
 	// FIXME: along with that, add an attribute to skip zindex checking mng-coverup-clickable???
 	var zIndex   = 1000;
-
-	angular.module('mngCoverup', [])
 	
-	.directive('mngCoverup', ['$interval', function ($interval) {
-		
-		if ( !hasCSS() ) addCSS();
-		
-		return {
-			restrict     : 'EA',
-
-			scope        : {
-				centered           : '=?',
-				centeredHorizontal : '=?',
-				centeredVertical   : '=?'
-			},
-
-			transclude   : true,
-			template    : '<div class="mngCoverupContainer">'+
-			'<div class="mngCoverupBackground"></div>'+
-			'<div ng-transclude class="mngCoverupContent"></div>'+
-			'</div>',
-
-			link : mngCoverupLink
-		}        
-	}]);
-
 	function hasCSS () {
 		for (var i=0; i<document.styleSheets.length; i++) {
 			if ( document.styleSheets[i].title === cssTitle) {
@@ -174,4 +148,26 @@
 		}
 	}
 
+	angular.module('mngCoverup', [])
+	.directive('mngCoverup', function () {
+		if ( !hasCSS() ) addCSS();
+				
+		return {
+			restrict     : 'EA',
+
+			scope        : {
+				centered           : '=?',
+				centeredHorizontal : '=?',
+				centeredVertical   : '=?'
+			},
+
+			transclude   : true,
+			template    : '<div class="mngCoverupContainer">'+
+			'<div class="mngCoverupBackground"></div>'+
+			'<div ng-transclude class="mngCoverupContent"></div>'+
+			'</div>',
+
+			link : mngCoverupLink
+		}        
+	});
 })();

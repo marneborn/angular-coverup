@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 				options : {
 					port      : 8000,
 					hostname  : 'localhost',
-					base      : 'examples',
+					base      : '.',
 					keepalive : true,
 					debug     : true,
 				}

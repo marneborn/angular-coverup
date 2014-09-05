@@ -1,9 +1,54 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" href="app.css">
+
 </head>
 <body ng-app="myApp">
-  <script src="../../bower_components/angular/angular.test.js"></script>
-  <script src="app.js"></script>
+	<div ng-controller="myCtrl" ng-switch="select">
+		<p>Hello World</p>
+		<p>How are you</p>
+		<div style="position:relative">
+			<div>Cover me up!!</div>
+			<p> And me!!!</p>
+			<p> And me!!!</p>
+			<p> And me!!!</p>
+			<p> And me!!!</p>
+			<p> And me!!!</p>
+			
+			<mng-coverup ng-show="select===1">
+				<img src="spinner.gif" />Centered
+			</mng-coverup>
+			<mng-coverup ng-show="select===2" centered="false">
+				<img src="spinner.gif" />Not centered
+			</mng-coverup>
+			<mng-coverup ng-show="select===3" centered-horizontal="true">
+				<img src="spinner.gif" />Centered horizontally
+			</mng-coverup>
+			<mng-coverup ng-show="select===4" centered-horizontal="false">
+				<img src="spinner.gif" />Centered vertically
+			</mng-coverup>
+			<mng-coverup ng-show="select===5" centered-vertical="false">
+				<img src="spinner.gif" />Centered horizontally
+			</mng-coverup>
+			<mng-coverup ng-show="select===6" centered-vertical="true">
+				<img src="spinner.gif" />Centered vertically
+			</mng-coverup>
+			<mng-coverup ng-show="select===7" class="testCU1">
+				<img src="spinner.gif" />Red!!!
+			</mng-coverup>
+			<mng-coverup ng-show="select===8" class="testCU2">
+				<img src="spinner.gif" />Solid Red!!!
+			</mng-coverup>
+			<mng-coverup ng-show="select===9" class="testCU3">
+				<img src="spinner.gif" />Clear with border
+			</mng-coverup>
+		</div>
+		<button ng-click="incrToggle()">Toggle</button>
+	</div>
+	<script src="../../../bower_components/angular/angular.js"></script>
+	<script src="../../../bower_components/angular-mocks/angular-mocks.test.js"></script>
+	<script src="../../../angular-coverup.js"></script>
+	<script src="app.js"></script>
 </body>
 </html>

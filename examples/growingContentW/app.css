@@ -1,0 +1,16 @@
+.testCU1 .mngCoverupBackground {
+	background-color: red;
+}
+.testCU2 .mngCoverupBackground {
+	background-color: red;
+	opacity : 1;
+}
+.testCU3 .mngCoverupBackground {
+	opacity : 0;
+}
+.testCU3 .mngCoverupContainer {
+	border  : 1px solid black;
+}
+.testCU3 .mngCoverupContent {
+	border  : 1px solid blue;
+}
