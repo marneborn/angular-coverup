@@ -1,19 +1,27 @@
 {
   "name": "angular-coverup",
-  "main": "angular-coverup.js",
   "version": "0.0.1",
+  "homepage": "https://github.com/marneborn/angular-coverup",
   "authors": [
     "marneborn <mikael@arneborn.net>"
   ],
-  "description": "Cover all siblings in the dom.",
+  "description": "create a div that covers the parent element in the dom.",
+  "main": "angular-coverup.js",
+  "keywords": [
+    "spinner",
+    "overlay",
+    "angular",
+    "angularjs"
+  ],
   "license": "MIT",
-  "dependencies": {
-	  "angular": "~1.2.16"
-  },
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components"
+    "bower_components",
+    "test",
+    "tests"
   ],
-  keywords: ['angularjs', 'angular', 'overlay', 'spinner']
+  "dependencies": {
+    "angular-mocks": "~1.2.23"
+  }
 }
